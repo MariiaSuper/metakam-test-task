@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer__logo">
-        <img src="/logo.png" alt="Nice Gadgets" className="logo" />
+        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Nice Gadgets" className="logo" />
         <span className="logo__text">METAKAM</span>
       </div>
 
