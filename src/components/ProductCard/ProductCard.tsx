@@ -177,7 +177,7 @@ function ProductCard(params: ProductCardProps) {
                 className="product-card__button-add"
                 style={{
                   height: '40px',
-                  width: '270px',
+                  width: '230px',
                   backgroundColor: 'white',
                   color: 'black',
                   fontSize: '16px'

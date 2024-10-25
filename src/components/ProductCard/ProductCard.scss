@@ -48,6 +48,7 @@
     .capacity-selector {
       display: flex;
       gap: 8px;
+      flex-wrap: wrap;
 
       .capacity {
         all: unset;
