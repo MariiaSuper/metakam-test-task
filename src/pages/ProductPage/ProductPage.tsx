@@ -1,4 +1,4 @@
-import { Flex, Text, Button, Container } from '@radix-ui/themes';
+import { Container } from '@radix-ui/themes';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import data from '../../data/products.json';

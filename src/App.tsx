@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
 import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Footer from './pages/Footer/Footer';
 
 export const App = () => {
   const navigate = useNavigate();
   const { slug } = useParams();
+  console.log('slug', slug);
 
   useEffect(() => {
-    if (slug === '/') {
+    if (slug === '/' || !slug) {
       navigate(`/product/apple-iphone-14-pro-128gb-spaceblack`);
     }
   }, [navigate, slug]);
@@ -16,7 +18,7 @@ export const App = () => {
     <div>
       <Header />
       <Outlet />
-      <div>Footer</div>
+      <Footer />
     </div>
   );
 };

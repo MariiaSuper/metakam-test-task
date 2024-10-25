@@ -1,17 +1,15 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import * as Popover from '@radix-ui/react-popover';
 import * as Separator from '@radix-ui/react-separator';
-import './Header.scss'; // Assuming you're using SCSS for styling
+import './Header.scss';
 import heartSVG from '../../assets/HeartLike_Header_default.svg';
 import cartSVG from '../../assets/ShoppingBag_header.svg';
-import { Text } from '@radix-ui/themes';
-import { useWindowSize } from '@uidotdev/usehooks';
 
 function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <img src="/logo.png" alt="Nice Gadgets" className="logo" />
+        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Nice Gadgets" className="logo" />
         <span className="logo__text">METAKAM</span>
       </div>
 
