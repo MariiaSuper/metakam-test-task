@@ -16,17 +16,23 @@ function Header() {
       <NavigationMenu.Root className="navigation-menu">
         <NavigationMenu.List className="navigation-menu__list">
           <NavigationMenu.Item>
-            <NavigationMenu.Link href="/" className="navigation-menu__link">
+            <NavigationMenu.Link
+              href={`${process.env.PUBLIC_URL}/`}
+              className="navigation-menu__link">
               HOME
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item>
-            <NavigationMenu.Link href="/phones" className="navigation-menu__link">
+            <NavigationMenu.Link
+              href={`${process.env.PUBLIC_URL}/news`}
+              className="navigation-menu__link">
               NEWS
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item>
-            <NavigationMenu.Link href="/tablets" className="navigation-menu__link">
+            <NavigationMenu.Link
+              href={`${process.env.PUBLIC_URL}/products`}
+              className="navigation-menu__link">
               PRODUCTS
             </NavigationMenu.Link>
           </NavigationMenu.Item>
