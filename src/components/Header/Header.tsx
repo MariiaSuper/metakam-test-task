@@ -9,7 +9,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Nice Gadgets" className="logo" />
+        <img src={`/logo.png`} alt="Nice Gadgets" className="logo" />
         <span className="logo__text">METAKAM</span>
       </div>
 

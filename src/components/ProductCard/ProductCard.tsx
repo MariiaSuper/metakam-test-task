@@ -85,7 +85,7 @@ function ProductCard(params: ProductCardProps) {
                     className={classNames('product-card__slider-image', {
                       'product-card__slider-image--active': selectedImage === index
                     })}
-                    src={`${process.env.PUBLIC_URL}/${item}`}
+                    src={`/${item}`}
                     onClick={() => setSelectedImage(index)}
                   />
                 ))}
@@ -95,7 +95,7 @@ function ProductCard(params: ProductCardProps) {
               <img
                 style={{ maxWidth: '100%' }}
                 className="product-card__image"
-                src={`${process.env.PUBLIC_URL}/${mainImage}`}
+                src={`/${mainImage}`}
               />
             </Box>
           </Flex>

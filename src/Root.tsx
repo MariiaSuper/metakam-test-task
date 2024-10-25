@@ -6,7 +6,7 @@ import { App } from './App';
 
 export const Root = () => (
   <Theme grayColor="sand" panelBackground="solid">
-    <HashRouter basename={process.env.REACT_APP_BASENAME}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="product/:slug" element={<ProductPage />} />
