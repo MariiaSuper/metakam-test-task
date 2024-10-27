@@ -1,12 +1,25 @@
 .slider {
-  &__slider-image {
-    &:hover {
-      transition: transform 0.8s;
-      transform: scale(1.05);
-    }
+  &__preview-container {
+    position: relative;
+    overflow: hidden;
+  }
 
-    &--active {
-      border: 1px solid #5f6563;
+  &__preview-images {
+    padding: 3px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transition: top 0.8s;
+
+    &-image {
+      &:hover {
+        transition: transform 0.8s;
+        transform: scale(1.05);
+      }
+
+      &--active {
+        border: 1px solid #5f6563;
+      }
     }
   }
 
