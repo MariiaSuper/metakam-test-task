@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import { useNavigate } from 'react-router-dom';
 import heartSVG from '../../assets/HeartLike_Header_default.svg';
 import * as Label from '@radix-ui/react-label';
+import { Slider } from '../Slider';
 
 interface ProductSpec {
   label: string;
@@ -62,11 +63,7 @@ function ProductCard(params: ProductCardProps) {
   const { name, images } = product;
 
   const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState(0);
   const [selectedCapacity, setSelectedCapacity] = useState(0);
-
-  const mainImage = images[selectedImage] || '';
-  const imagesForSlider = images.slice(0, 4);
 
   return (
     <Box className="product-card">
@@ -75,30 +72,7 @@ function ProductCard(params: ProductCardProps) {
       </Box>
       <Grid className="product-card__detail">
         <Box>
-          <Flex>
-            <Box style={{ width: '20%' }}>
-              <Flex direction="column">
-                {imagesForSlider.map((item, index) => (
-                  <img
-                    key={item}
-                    style={{ maxWidth: '100%' }}
-                    className={classNames('product-card__slider-image', {
-                      'product-card__slider-image--active': selectedImage === index
-                    })}
-                    src={`${process.env.PUBLIC_URL}/${item}`}
-                    onClick={() => setSelectedImage(index)}
-                  />
-                ))}
-              </Flex>
-            </Box>
-            <Box style={{ width: '80%' }}>
-              <img
-                style={{ maxWidth: '100%' }}
-                className="product-card__image"
-                src={`${process.env.PUBLIC_URL}/${mainImage}`}
-              />
-            </Box>
-          </Flex>
+          <Slider images={images} />
         </Box>
 
         <Box>
@@ -177,7 +151,7 @@ function ProductCard(params: ProductCardProps) {
                 className="product-card__button-add"
                 style={{
                   height: '40px',
-                  width: '230px',
+                  width: '270px',
                   backgroundColor: 'white',
                   color: 'black',
                   fontSize: '16px'

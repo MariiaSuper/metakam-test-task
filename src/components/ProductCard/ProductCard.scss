@@ -8,24 +8,6 @@
     }
   }
 
-  &__slider-image {
-    &:hover {
-      transition: transform 0.8s;
-      transform: scale(1.05);
-    }
-
-    &--active {
-      border: 1px solid #5f6563;
-    }
-  }
-
-  &__image {
-    &:hover {
-      transition: transform 0.8s;
-      transform: scale(1.05);
-    }
-  }
-
   &__colors {
     display: flex;
     gap: 16px;
